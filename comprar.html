@@ -12,36 +12,37 @@
     </section>
 
 
-<form action="/action_page.php" method="post">
+<form action="/gracias.html" method="post" data-netlify="true" name="pedido">
 <label for="nombre">Nombre:</label><br>
-  <input type="text" id="nombre" name="nombre"><br>
+  <input type="text" id="nombre" name="nombre" required><br>
   <label for="correo">Correo:</label><br>
-  <input type="text" id="correo" name="correo"><br>
+  <input type="email" id="correo" name="correo" required><br>
   <label for="contacto">Contacto alternativo (núm de Whatsapp o Instagram):</label><br>
-  <input type="text" id="contacto" name="contacto"><br>
+  <input type="text" id="contacto" name="contacto" required><br>
    <label for="patrocinador">Nombre con el que quieras aparecer como patrocinador/a/e:</label><br>
   <input type="text" id="patrocinador" name="patrocinador"><br>
 
   <p>¿Qué estás ordenando?</p>
     <input type="checkbox" id="nft" name="nft" value="nft">
-  <label for="obj1">Un NFT - $3</label><br>
+  <label for="nft">Un NFT - $3</label><br>
      <input type="checkbox" id="sz" name="sz" value="sz">
-  <label for="obj2">Un mail sobre tu signo zodiacal - $3</label><br>
+  <label for="sz">Un mail sobre tu signo zodiacal - $3</label><br>
      <input type="checkbox" id="opinion" name="opinion" value="opinion">
-  <label for="obj3">La opinión de mi amigo Goyo - $3</label><br>
+  <label for="opinion">La opinión de mi amigo Goyo - $3</label><br>
    <input type="checkbox" id="pag" name="pag" value="pag">
-  <label for="obj4">Tu propia subpágina - $3</label><br>
+  <label for="pag">Tu propia subpágina - $3</label><br>
   <input type="checkbox" id="chistes" name="chistes" value="chistes">
-  <label for="obj5">Un audio en donde te cuento chistes sin parar por 1 minuto - $3</label><br>
+  <label for="chistes">Un audio en donde te cuento chistes sin parar por 1 minuto - $3</label><br>
 
   <label for="pago">Forma de pago:</label>
   <p><em>Si tu forma de pago es transferencia, te buscaré a través de tu método de contacto para pasarte mis datos. Si ya pagaste en persona, marca 'pagado' y te entrego el producto cuando esté.</em></p>
-  <select id="pago" name="pago">
+  <select id="pago" name="pago" required>
     <option value="transferencia">Transferencia</option>
     <option value="pagado">Pagado en persona</option>
   </select>
 <br>
-   <input type="submit" value="Submit">
+
+   <input type="submit" value="Enviar">
 
 </form>
 </body>
