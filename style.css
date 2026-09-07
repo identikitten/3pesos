@@ -1,5 +1,7 @@
 body{
-    
+        box-shadow: inset 2px 1px 15px 12px rgba(242, 139, 139, 0.5);
+    margin: 0px;
+    padding: 2em;
 }
 
 h1{
@@ -9,4 +11,62 @@ h1{
 
 img{
     max-width: 200px;
+}
+
+.bienvenide{
+    box-shadow: inset 2px 1px 20px 4px rgb(56 240 51);
+    border-radius: 20px;
+    text-align: center;
+    /* width: 600px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.6em;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu > div{
+    padding: 1em;
+    box-shadow: inset #d4e8fa 2px 1px 7px 8px;
+    border-radius: 50%;
+}
+
+div.venta {
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .venta table,
+  .venta tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .venta tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.8em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .venta th {
+    display: none; /* headers don't make sense once cells wrap freely */
+  }
+
+  .venta td {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .venta img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    display: block;
+  }
 }

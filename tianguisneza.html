@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>3pesos.shop</title>
+</head>
+
+<body>
+    <section class="menu">
+<div class=""><a href="/index.html">tienda</a></div>
+<div class=""><a href="/comprar.html">comprar</a></div>
+    </section>
+
+
+<form action="/gracias.html" method="post" data-netlify="true" name="pedido">
+  <input type="hidden" name="formulariotianguis" value="pedido">
+
+<label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre" required><br>
+  <label for="correo">Correo:</label><br>
+  <input type="email" id="correo" name="correo" required><br>
+  <label for="contacto">Contacto alternativo (núm de Whatsapp o Instagram):</label><br>
+  <input type="text" id="contacto" name="contacto" required><br>
+   <label for="patrocinador">Nombre con el que quieras aparecer como patrocinador/a/e:</label><br>
+  <input type="text" id="patrocinador" name="patrocinador"><br>
+
+  <p>¿Qué estás ordenando?</p>
+    <input type="checkbox" id="nft" name="nft" value="nft">
+  <label for="nft">Un NFT - $3</label><br>
+     <input type="checkbox" id="sz" name="sz" value="sz">
+  <label for="sz">Un mail sobre tu signo zodiacal - $3</label><br>
+     <input type="checkbox" id="opinion" name="opinion" value="opinion">
+  <label for="opinion">La opinión de mi amigo Goyo - $3</label><br>
+   <input type="checkbox" id="pag" name="pag" value="pag">
+  <label for="pag">Tu propia subpágina - $3</label><br>
+  <input type="checkbox" id="chistes" name="chistes" value="chistes">
+  <label for="chistes">Un audio en donde te cuento chistes sin parar por 1 minuto - $3</label><br>
+
+  <label for="pago">Forma de pago:</label>
+  <p><em>Si tu forma de pago es transferencia, te buscaré a través de tu método de contacto para pasarte mis datos. Si ya pagaste en persona, marca 'pagado' y te entrego el producto cuando esté.</em></p>
+  <select id="pago" name="pago" required>
+    <option value="transferencia">Transferencia</option>
+    <option value="pagado">Pagado en persona (en Galería Tianguis Neza)</option>
+  </select>
+<br>
+
+   <input type="submit" value="Enviar">
+
+</form>
+</body>
+
+</html>
