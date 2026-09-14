@@ -1,16 +1,87 @@
+@font-face {
+  font-family: "xxQueen";
+  src: url(xxQueen-basic.ttf);
+}
+
+
 body{
-        box-shadow: inset 2px 1px 15px 12px rgba(242, 139, 139, 0.5);
-    margin: 0px;
-    padding: 2em;
+    box-shadow: inset 2px 1px 15px 12px rgba(242, 139, 139, 0.5);
+     padding: 2em 0;
+     margin: 0;
+   background-image: url("bg/gb24.jpg");
+}
+
+
+.contenido{
+  box-shadow: inset 2px 1px 15px 12px rgba(242, 139, 139, 0.5);
+  background-color: white;
+   padding: 2em;
+   margin-left: auto;
+   margin-right: auto;
+   width: 80%;
+   margin-bottom: 2em;
 }
 
 h1{
-    text-shadow: 2px 2px 5px rgb(116, 241, 116);
+    /*text-shadow: 2px 2px 5px rgb(116, 241, 116);*/
+    font-family: "xxQueen";
+    font-size: 3em;
+}
+
+p, tbody{
+  font-size: 1.5em;
+}
+
+.menu{
+ display: flex;
+ justify-content: space-around;
+}
+
+.menu img{
+  height: 70px;
+}
+
+.triada{
+  text-align: center;
+}
+
+.triada img{
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bienvenide {
+    box-shadow: inset 2px 1px 20px 4px rgb(56 240 51);
+    border-radius: 20px;
+    text-align: center;
+    /* width: 600px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.6em;
 }
 
 
-img{
+.divider{
+  text-align: center;
+  padding: 1.4em 0;
+}
+
+
+td > img{
     max-width: 200px;
+    height: auto;
+}
+
+.menu > img{
+  height: 100px;
+}
+
+.intro{
+   text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.6em;
 }
 
 .bienvenide{
@@ -23,19 +94,24 @@ img{
     padding: 0.6em;
 }
 
-.menu{
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu > div{
-    padding: 1em;
-    box-shadow: inset #d4e8fa 2px 1px 7px 8px;
-    border-radius: 50%;
-}
 
 div.venta {
   overflow-x: auto;
+}
+
+.vert-txt {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+}
+
+.ml{
+    position: absolute;
+    left: 0px;
+}
+
+.mr{
+    position: absolute;
+    right: 0px;
 }
 
 @media screen and (max-width: 600px) {
