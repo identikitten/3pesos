@@ -5,17 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>3pesos.shop</title>
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 </head>
 
+<script>
+  window.addEventListener("load", (event) => {
+  new cursoreffects.fairyDustCursor({
+  colors: ["#4E7F62", "rgb(56 240 51)", "#4E7F62"],
+  fairySymbol: "$",
+});
+});
+</script>
+
 <body>
-    <section class="menu">
-<div class=""><a href="/index.html">tienda</a></div>
-<div class=""><a href="/comprar.html">comprar</a></div>
+<section class="contenido">
+   <section class="menu">   
+<div class=""><a href="/index.html"><img src="img/tienda.png"></a></div>
+<div class=""><a href="/comprar.html"><img src="img/comprar.png"></a></div>
     </section>
 
+  <div class="divider"><img src="img/div2.gif"></div>
 
-<form action="/gracias.html" method="post" data-netlify="true" name="pedido">
+
+<form action="/gracias.html" method="post" data-netlify="true" data-netlify-honeypot="bot-field" name="pedido">
   <input type="hidden" name="formulario" value="pedido">
+  <p style="display:none;">
+    <label>No llenes esto si eres humano: <input name="bot-field"></label>
+  </p>
 
 <label for="nombre">Nombre:</label><br>
   <input type="text" id="nombre" name="nombre" required><br>
@@ -38,17 +54,60 @@
   <input type="checkbox" id="chistes" name="chistes" value="chistes">
   <label for="chistes">Un audio en donde te cuento chistes sin parar por 1 minuto - $3</label><br>
 
-  <label for="pago">Forma de pago:</label>
-  <p><em>Si tu forma de pago es transferencia, te buscaré a través de tu método de contacto para pasarte mis datos. Si ya pagaste en persona, marca 'pagado' y te entrego el producto cuando esté.</em></p>
+  <p><strong id="total">Total: $0</strong></p>
+  <input type="hidden" id="total-input" name="total" value="0">
+  <p id="error-productos" role="alert" style="display:none;"><em>Elige al menos un producto para continuar.</em></p>
+
+  <p><label for="pago">Forma de pago:</label></p>
+  <h5><em>Si tu forma de pago es transferencia, te buscaré a través de tu método de contacto para pasarte mis datos. Si ya pagaste en persona, marca 'pagado' y te entrego el producto cuando esté.</em></h5>
   <select id="pago" name="pago" required>
     <option value="transferencia">Transferencia</option>
-    <option value="pagado">Pagado en persona (en Galería Tianguis Neza)</option>
+    <option value="pagado">Pago realizado en persona (en Galería Tianguis Neza)</option>
   </select>
 <br>
 
    <input type="submit" value="Enviar">
 
 </form>
+</section>
+
+<script>
+  (function () {
+    var PRECIO = 3;
+    var form = document.forms["pedido"];
+    var checks = form.querySelectorAll('input[type="checkbox"]');
+    var total = document.getElementById("total");
+    var totalInput = document.getElementById("total-input");
+    var error = document.getElementById("error-productos");
+
+    function cuantos() {
+      var n = 0;
+      for (var i = 0; i < checks.length; i++) if (checks[i].checked) n++;
+      return n;
+    }
+
+    function actualizar() {
+      var suma = cuantos() * PRECIO;
+      total.textContent = "Total: $" + suma;
+      totalInput.value = suma;
+      if (suma > 0) error.style.display = "none";
+    }
+
+    for (var i = 0; i < checks.length; i++) {
+      checks[i].addEventListener("change", actualizar);
+    }
+
+    form.addEventListener("submit", function (e) {
+      if (cuantos() === 0) {
+        e.preventDefault();
+        error.style.display = "block";
+        checks[0].focus();
+      }
+    });
+
+    actualizar();
+  })();
+</script>
 </body>
 
 </html>

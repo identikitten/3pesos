@@ -26,6 +26,7 @@ h1{
     /*text-shadow: 2px 2px 5px rgb(116, 241, 116);*/
     font-family: "xxQueen";
     font-size: 3em;
+    margin: 0px;
 }
 
 p, tbody{
@@ -35,6 +36,7 @@ p, tbody{
 .menu{
  display: flex;
  justify-content: space-around;
+ padding-top: 0.6em;
 }
 
 .menu img{
@@ -64,7 +66,7 @@ p, tbody{
 
 .divider{
   text-align: center;
-  padding: 1.4em 0;
+  padding: 1.2em 0;
 }
 
 
@@ -94,6 +96,19 @@ td > img{
     padding: 0.6em;
 }
 
+button{
+  margin-top: 0.8em;
+}
+
+
+form{
+  font-size: 1.1em;
+}
+
+input, select{
+     margin-bottom: 1em;
+}
+
 
 div.venta {
   overflow-x: auto;
@@ -115,6 +130,15 @@ div.venta {
 }
 
 @media screen and (max-width: 600px) {
+
+  body{
+    padding: 1em;
+  }
+
+  p, tbody{
+    font-size: 1.1em;
+  }
+
   .venta table,
   .venta tbody {
     display: block;
@@ -145,4 +169,25 @@ div.venta {
     height: auto;
     display: block;
   }
+  
+  .divider > img{
+    max-width: 100%;
+  }
+
+h1{
+  font-size: 1.8em;
+}
+
+.menu img {
+    height: 30px;
+}
+
+.triada img {
+    width: 100px;
+}
+
+#pago{
+  max-width: 100%;
+}
+
 }
