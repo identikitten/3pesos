@@ -129,6 +129,10 @@ div.venta {
     right: 0px;
 }
 
+.patronato > img{
+     max-width: 200px;
+}
+
 @media screen and (max-width: 600px) {
 
   body{
@@ -178,8 +182,12 @@ h1{
   font-size: 1.8em;
 }
 
+.menu{
+  flex-wrap: wrap;
+}
+
 .menu img {
-    height: 30px;
+    height: 40px;
 }
 
 .triada img {
