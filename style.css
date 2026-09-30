@@ -11,6 +11,15 @@ body{
    background-image: url("bg/gb24.jpg");
 }
 
+.pat{
+   background-image: url("bg/gb6.gif");
+}
+
+.pat2{
+   background-image: url("bg/gb19.gif");
+}
+
+
 
 .contenido{
   box-shadow: inset 2px 1px 15px 12px rgba(242, 139, 139, 0.5);
@@ -133,6 +142,35 @@ div.venta {
      max-width: 200px;
 }
 
+.pat-lista{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*-- estilos patrocinadorxs --*/
+
+.imagenes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+.imagenes img{
+  max-width: 40%;
+  box-shadow: inset 0px 0px 15px 12px rgb(164 242 139 / 50%);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.pat-txt{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-- estilos cel --*/
+
 @media screen and (max-width: 600px) {
 
   body{
@@ -196,6 +234,19 @@ h1{
 
 #pago{
   max-width: 100%;
+}
+
+.imagenes{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+.imagenes img{
+  max-width: 100%;
+  box-shadow: inset 0px 0px 10px 7px rgb(164 242 139 / 50%);
+  margin-bottom: 1em;
+  padding: 0px;
 }
 
 }
