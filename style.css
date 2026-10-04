@@ -142,6 +142,16 @@ div.venta {
      max-width: 200px;
 }
 
+.monedas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.monedas img{
+  max-width: 15%;
+}
+
 .pat-lista{
   display: flex;
   justify-content: space-between;
