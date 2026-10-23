@@ -155,6 +155,15 @@ div.venta {
 .pat-lista{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pat-lista p{
+ 
+}
+
+.pat-lista p::after {
+  content: " / ";
 }
 
 /*-- estilos patrocinadorxs --*/
